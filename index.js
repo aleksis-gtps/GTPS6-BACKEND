@@ -55,7 +55,7 @@ app.all('/player/growid/login/validate', (req, res) => {
 });
 
 app.all('/player/*', function (req, res) {
-    res.status(301).redirect('http://api.yoruakio.tech/player/' + req.path.slice(8));
+    res.status(301).redirect('https://gtps-6-backend.vercel.app/player/' + req.path.slice(8));
 });
 
 app.get('/', function (req, res) {
