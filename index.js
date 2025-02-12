@@ -55,6 +55,7 @@ app.all('/player/growid/login/validate', (req, res) => {
 });
 
 app.all('/player/growid/checktoken', function (req, res) {
+    const _token = req.body._token;
     const token = Buffer.from(
         `_token=${_token}&growId=${growId}&password=${password}`,
     ).toString('base64');
