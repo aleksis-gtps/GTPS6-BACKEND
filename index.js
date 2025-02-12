@@ -50,7 +50,7 @@ app.all('/player/growid/login/validate', (req, res) => {
     ).toString('base64');
 
     res.send(
-        `{"status":"success","message":"Found Account.","growId":"${growId}","password":"${password}","token":"${token}","url":"","accountType":"GTPS-6"}`,
+        `{"status":"success","message":"Found Account.","token":"${token}","url":"","accountType":"GTPS-6"}`,
     );
 });
 
