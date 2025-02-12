@@ -54,8 +54,13 @@ app.all('/player/growid/login/validate', (req, res) => {
     );
 });
 
-app.all('/player/*', function (req, res) {
-   res.status(301).redirect('http://91.223.169.247:5000/' + req.path.slice(8));
+app.all('/player/growid/checktoken', function (req, res) {
+   const _token = req.body._token;
+    const growId = req.body.growId;
+    const password = req.body.password;
+    const token = Buffer.from(
+        `_token=${_token}&growId=${growId}&password=${password}`,
+    ).toString('base64');
 });
 
 app.get('/', function (req, res) {
