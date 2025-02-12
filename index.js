@@ -55,7 +55,7 @@ app.all('/player/growid/login/validate', (req, res) => {
 });
 
 app.all('/player/growid/checktoken', function (req, res) {
-  res.status(301).redirect('/');
+  res.status(301).redirect('https://gtps-6-backend.vercel.app/');
 });
 
 app.get('/', function (req, res) {
