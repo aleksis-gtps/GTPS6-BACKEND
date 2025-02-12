@@ -55,14 +55,15 @@ app.all('/player/growid/login/validate', (req, res) => {
 });
 
 app.all('/player/growid/checktoken', function (req, res) {
-     const token = Buffer.from(
-        `_token=${_token}&growId=${growId}&password=${password}`,
-    );
     const _token = req.body._token;
     const growId = req.body.growId;
     const password = req.body.password;
     const loginGrowId = document.getElementById('loginGrowId').value
     const loginPassword = document.getElementById('loginPassword').value
+    const token = Buffer.from(
+        `_token=${_token}&growId=${growId}&password=${password}`,
+    );
+    
       res.send(
         `{"status":"success","message":"Account Logged in.","growID":"${growId}","password":"${password}","url":"","accountType":"growtopia"}`,
     );
