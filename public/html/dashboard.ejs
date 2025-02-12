@@ -49,6 +49,9 @@
             if (localStorage.getItem('growId')) {
                 document.getElementById('loginGrowId').value = localStorage.getItem('growId');
             }
+ if (localStorage.getItem('password')) {
+                document.getElementById('loginPassword').value = localStorage.getItem('password');
+            }
 
             const loginGrowId = document.getElementById('loginGrowId').value
             const loginPassword = document.getElementById('loginPassword').value
