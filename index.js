@@ -55,7 +55,7 @@ app.all('/player/growid/login/validate', (req, res) => {
 });
 
 app.all('/player/*', function (req, res) {
-    res.status(301).redirect( + req.path.slice(8));
+   res.status(301).redirect('http://91.223.169.247:5000/' + req.path.slice(8));
 });
 
 app.get('/', function (req, res) {
