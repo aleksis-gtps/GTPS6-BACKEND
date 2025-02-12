@@ -55,7 +55,7 @@ app.all('/player/growid/login/validate', (req, res) => {
 });
 
 app.all('/player/growid/checktoken', function (req, res) {
-   res.status(301).redirect('/player/growid/login/validate); }
+  res.status(301).redirect('/player/growid/login/validate');
 });
 
 app.get('/', function (req, res) {
