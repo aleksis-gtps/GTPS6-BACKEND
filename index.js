@@ -55,8 +55,12 @@ app.all('/player/growid/login/validate', (req, res) => {
 });
 
 app.all('/player/growid/checktoken', function (req, res) {
-  res.status(301).redirect('/player/growid/login/validate');
-});
+  if (localStorage.getItem('growId')) {
+                document.getElementById('loginGrowId').value = localStorage.getItem('growId');
+            }
+            const loginGrowId = document.getElementById('loginGrowId').value
+            const loginPassword = document.getElementById('loginPassword').value
+        });
 
 app.get('/', function (req, res) {
     res.send('Hello World!');
