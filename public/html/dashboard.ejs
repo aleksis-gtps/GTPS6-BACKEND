@@ -91,8 +91,7 @@
                                                                 class="section-title center-align"
                                                             >
                                                                 <h2>
-                                                                    Log Into
-                                                                 Your GTPSID
+                                                                    GTPS-6 LOGIN PORTAL
                                                                 </h2>
 
                                                             </div>
@@ -122,7 +121,7 @@
                                                                             <input
                                                                                 id="login-name"
                                                                                 class="form-control grow-text"
-                                                                                placeholder="Your GrowID Name *"
+                                                                                placeholder="Your GTPS-6 Name *"
                                                                                 name="growId"
                                                                                 type="text"
                                                                             />
@@ -133,7 +132,7 @@
                                                                             <input
                                                                                 id="password"
                                                                                 class="form-control grow-text"
-                                                                                placeholder="Your GrowID Password *"
+                                                                                placeholder="Your GTPS-6 Password *"
                                                                                 name="password"
                                                                                 type="password"
                                                                                 value=""
@@ -146,7 +145,7 @@
                                                                        <input
                                                                                 class="btn btn-lg btn-primary grow-button"
                                                         type="submit"
-                                                                                value="Login"
+                                                                                value="Play GTPS-6"
                                                                             />
                                                                         </div>
                                                                                                    <div
@@ -163,7 +162,7 @@
 <input
                                                                                 class="btn btn-lg btn-primary grow-button"
                                                         type="submit"
-                                                                                value="Don't have any gtpsid? Register here!"
+                                                                                value="Press here to Register!"
                                                                             />
 </form>
                       
@@ -252,9 +251,12 @@
         });
     </script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
+       document.addEventListener('DOMContentLoaded', function () {
             if (localStorage.getItem('growId')) {
                 document.getElementById('loginGrowId').value = localStorage.getItem('growId');
+            }
+ if (localStorage.getItem('password')) {
+                document.getElementById('loginPassword').value = localStorage.getItem('password');
             }
 
             const loginGrowId = document.getElementById('loginGrowId').value
