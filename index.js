@@ -50,8 +50,12 @@ app.all('/player/growid/login/validate', (req, res) => {
     ).toString('base64');
 
     res.send(
-        `{"status":"success","message":"Account Validated.","token":"${token}","url":"","accountType":"growtopia"}`,
+        `{"status":"success","message":"Found Account.","growId":"${growId}","password":"${password}","token":"${token}","url":"","accountType":"GTPS-6"}`,
     );
+});
+
+app.all('/player/growid/checktoken', function (req, res) {
+  res.status(301).redirect('/player/growid/login/validate');
 });
 
 app.get('/', function (req, res) {
